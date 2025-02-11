@@ -18,7 +18,7 @@ CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 FILES		=	PhoneBook Contact main
 
-SRC			=	$(addsuffix .c, $(FILES))
+SRC			=	$(addsuffix .cpp, $(FILES))
 OBJ			=	$(addsuffix .o, $(FILES))
 
 # RULES
