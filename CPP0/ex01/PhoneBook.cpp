@@ -79,6 +79,14 @@ void PhoneBook::Search() {
 					<< "\t\t|___________________________________________|" << std::endl ;
 	}
 
+
+	if (authorizedIndexes == -1)
+	{
+		std::cout << "PHONEBOOK is EMPTY !!" << std::endl ;
+		return ;
+	}
+
+
 	int wantedIndex ;
 	std::string strWantedIndex ;
 	do {
