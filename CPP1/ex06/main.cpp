@@ -6,6 +6,14 @@ int main(int argc, char *argv[]) {
 		return 1 ;
 	}
 
+	std::string argv1(argv[1]) ;
+	if (argv1 != "DEBUG" && argv1 != "INFO" && argv1 != "WARNING" && argv1 != "ERROR")
+	{
+		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl ;
+		return 0 ;
+	}
+
+
 	Harl programer ;
 
 	switch (argv[1][0]) {
@@ -26,6 +34,6 @@ int main(int argc, char *argv[]) {
 		programer.complain("ERROR") ;
 		std::cout << std::endl ;
 		break ;
-	default: std::cout << "[ Probably complaining about insignificant problems ]" << std::endl ; break;
+	default: break;
 	}
 }
