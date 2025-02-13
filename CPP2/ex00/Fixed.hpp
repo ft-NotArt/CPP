@@ -9,7 +9,7 @@ private:
 	int raw ;
 public:
 	Fixed() ;
-	Fixed(Fixed &to_cpy) ;
+	Fixed(Fixed const &to_cpy) ;
 	~Fixed() ;
 	Fixed &operator=(const Fixed &to_cpy) ;
 	void setRawBits(int const raw) ;

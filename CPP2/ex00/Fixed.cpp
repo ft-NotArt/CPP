@@ -4,7 +4,7 @@ Fixed::Fixed() {
 	this->raw = 0 ;
 }
 
-Fixed::Fixed(Fixed &to_cpy) {
+Fixed::Fixed(Fixed const &to_cpy) {
 	this->raw = to_cpy.raw ;
 }
 
