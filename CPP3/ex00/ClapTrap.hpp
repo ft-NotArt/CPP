@@ -12,7 +12,7 @@ private:
 	int attackDamage ;
 public:
 	ClapTrap() ;
-	ClapTrap(std::string name, unsigned int hitPoints, unsigned int EnergyPoints, unsigned int attackDamage) ;
+	ClapTrap(std::string name) ;
 	ClapTrap(const ClapTrap &cp) ;
 	~ClapTrap() ;
 	ClapTrap &operator=(const ClapTrap &cp) ;

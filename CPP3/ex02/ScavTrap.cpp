@@ -5,11 +5,17 @@
 
 /* Constructors & Destructor */
 
-ScavTrap::ScavTrap() : ClapTrap("normal", 100, 50, 20) {
+ScavTrap::ScavTrap() : ClapTrap("normal") {
+	this->hitPoints = 100 ;
+	this->energyPoints = 50 ;
+	this->attackDamage = 20 ;
 	std::cout << "ScavTrap " << this->name << " had just been created (via Default)" << std::endl ;
 }
 
-ScavTrap::ScavTrap(std::string name, unsigned int hitPoints, unsigned int energyPoints, unsigned int attackDamage) : ClapTrap(name, hitPoints, energyPoints, attackDamage) {
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
+	this->hitPoints = 100 ;
+	this->energyPoints = 50 ;
+	this->attackDamage = 20 ;
 	std::cout << "ScavTrap " << this->name << " had just been created (via Args)" << std::endl ;
 }
 

@@ -9,7 +9,7 @@ ClapTrap::ClapTrap() : name("basic"), hitPoints(10), energyPoints(10), attackDam
 	std::cout << "ClapTrap " << this->name << " had just been created (via Default)" << std::endl ;
 }
 
-ClapTrap::ClapTrap(std::string name, unsigned int hitPoints, unsigned int EnergyPoints, unsigned int attackDamage) : name(name), hitPoints(hitPoints), energyPoints(EnergyPoints), attackDamage(attackDamage) {
+ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0) {
 	std::cout << "ClapTrap " << this->name << " had just been created (via Args)" << std::endl ;
 }
 

@@ -5,11 +5,17 @@
 
 /* Constructors & Destructor */
 
-FragTrap::FragTrap() : ClapTrap("classic", 100, 100, 30) {
+FragTrap::FragTrap() : ClapTrap("classic") {
+	this->hitPoints = 100 ;
+	this->energyPoints = 100 ;
+	this->attackDamage = 30 ;
 	std::cout << "FragTrap " << this->name << " had just been created (via Default)" << std::endl ;
 }
 
-FragTrap::FragTrap(std::string name, unsigned int hitPoints, unsigned int energyPoints, unsigned int attackDamage) : ClapTrap(name, hitPoints, energyPoints, attackDamage) {
+FragTrap::FragTrap(std::string name) : ClapTrap(name) {
+	this->hitPoints = 100 ;
+	this->energyPoints = 100 ;
+	this->attackDamage = 30 ;
 	std::cout << "FragTrap " << this->name << " had just been created (via Args)" << std::endl ;
 }
 

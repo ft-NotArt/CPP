@@ -4,7 +4,7 @@
 int main() {
 	FragTrap fg1 ;
 
-	FragTrap fg2("bouli", 5, 1200, 8795) ;
+	FragTrap fg2("bouli") ;
 
 	FragTrap fg3(fg2) ;
 

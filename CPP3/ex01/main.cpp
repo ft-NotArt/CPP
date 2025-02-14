@@ -4,7 +4,7 @@
 int main() {
 	ScavTrap sv1 ;
 
-	ScavTrap sv2("bouli", 5, 1200, 8795) ;
+	ScavTrap sv2("bouli") ;
 
 	ScavTrap sv3(sv2) ;
 
