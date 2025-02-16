@@ -70,8 +70,10 @@ void Character::equip(AMateria* m) {
 }
 
 void Character::unequip(int idx) {
-	if (idx >= 0 && idx < NB_ITEM_MAX)
+	if (idx >= 0 && idx < NB_ITEM_MAX && this->stuff[idx] != NULL) {
+		delete this->stuff[idx] ;
 		this->stuff[idx] = NULL ;
+	}
 }
 
 void Character::use(int idx, ICharacter& target) {
