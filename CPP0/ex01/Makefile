@@ -30,11 +30,11 @@ $(NAME)		:	$(OBJ)
 				echo -e '$(LIGHT_YELLOW) \tCompiled$(DARK_YELLOW) $@'
 
 clean		:
-				$(RM) $(OBJ) $(CHECKER_OBJ)
-				echo -e '$(LIGHT_YELLOW) \tCleaned$(YELLOW) $(OBJ) $(CHECKER_OBJ)'
+				$(RM) $(OBJ)
+				echo -e '$(LIGHT_YELLOW) \tCleaned$(YELLOW) $(OBJ)'
 
 fclean		:	clean
-				$(RM) $(NAME) $(CHECKER)
+				$(RM) $(NAME)
 				echo -e '$(LIGHT_YELLOW) \tCleaned$(DARK_YELLOW) $(NAME)'
 
 re			:	fclean all
