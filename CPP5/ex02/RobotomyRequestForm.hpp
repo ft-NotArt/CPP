@@ -17,5 +17,5 @@ public:
 	RobotomyRequestForm(std::string target) ;
 	RobotomyRequestForm(const RobotomyRequestForm &copy) ;
 	~RobotomyRequestForm() ;
-	virtual void doFormality() const ;
+	void doFormality() const ;
 };

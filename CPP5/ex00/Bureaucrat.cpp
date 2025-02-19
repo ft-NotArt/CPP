@@ -7,13 +7,11 @@
 
 Bureaucrat::Bureaucrat() : name("Sylvie"), grade(150) {}
 
-Bureaucrat::Bureaucrat(std::string name, int grade) : name(name) {
+Bureaucrat::Bureaucrat(std::string name, int grade) : name(name), grade(grade) {
 	if (grade < 1)
 		throw Bureaucrat::GradeTooHighException() ;
 	if (grade > 150)
 		throw Bureaucrat::GradeTooLowException() ;
-
-	this->grade = grade ;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &cpy) : name(cpy.name), grade(cpy.grade) {}

@@ -15,5 +15,5 @@ public:
 	ShrubberyCreationForm(std::string target) ;
 	ShrubberyCreationForm(const ShrubberyCreationForm &copy) ;
 	~ShrubberyCreationForm() ;
-	virtual void doFormality() const ;
+	void doFormality() const ;
 };

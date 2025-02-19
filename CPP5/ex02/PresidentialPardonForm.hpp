@@ -17,5 +17,5 @@ public:
 	PresidentialPardonForm(std::string target) ;
 	PresidentialPardonForm(const PresidentialPardonForm &copy) ;
 	~PresidentialPardonForm() ;
-	virtual void doFormality() const ;
+	void doFormality() const ;
 };
