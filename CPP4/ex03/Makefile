@@ -16,7 +16,7 @@ CXXFLAGS	=	-Wall -Wextra -Werror -g -std=c++98
 
 # FILES
 
-FILES		=	main AMateria Ice Cure ICharacter Character IMateriaSource MateriaSource
+FILES		=	main AMateria Ice Cure Character MateriaSource
 
 SRC			=	$(addsuffix .cpp, $(FILES))
 OBJ			=	$(addsuffix .o, $(FILES))
