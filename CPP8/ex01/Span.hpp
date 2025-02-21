@@ -18,6 +18,7 @@ public:
 
 	Span &operator=(const Span &cpy) ;
 
+	void			addRange() ;
 	void			addRange(std::vector<int>::iterator from, std::vector<int>::iterator to) ;
 	void			addNumber(int number) ;
 	unsigned int	shortestSpan() ;

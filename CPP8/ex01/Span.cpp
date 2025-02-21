@@ -27,6 +27,11 @@ Span &Span::operator=(const Span &cpy) {
 
 /* Methods */
 
+void Span::addRange() {
+	this->values.resize(this->max_val) ;
+	std::fill(this->values.begin(), this->values.end(), 1) ;
+}
+
 void Span::addRange(std::vector<int>::iterator from, std::vector<int>::iterator to) {
 	try {
 		while (from != to) {
