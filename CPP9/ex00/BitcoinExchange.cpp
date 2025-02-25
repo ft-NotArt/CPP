@@ -66,14 +66,16 @@ void BitcoinExchange::showStocks(std::ifstream &file) {
 		}
 
 		std::string date = str.substr(0, pos) ;
-		boost::trim(date) ;
+		// boost::trim(date) ;
+		date = trim(date) ;
 		if (!str_isvaliddate(date)) {
 			std::cout << "Invalid date: " << date << std::endl ;
 			continue ;
 		}
 
 		std::string val  = str.substr(pos + 1) ;
-		boost::trim(val) ;
+		// boost::trim(val) ;
+		val = trim(val) ;
 		if (val == "" || !str_isdouble(val) || atof(val.c_str()) > 1000) {
 			std::cout << "Invalid val: " << val << std::endl ;
 			continue ;
@@ -90,6 +92,22 @@ void BitcoinExchange::showStocks(std::ifstream &file) {
 
 
 /* Functions */
+
+// Thanks to dede.exe for those trim function, was a bit lost when I saw that I didn't have the right to use boost algorithms
+
+std::string trim_left(const std::string& str) {
+	const std::string pattern = " \f\n\r\t\v";
+	return str.substr(str.find_first_not_of(pattern));
+}
+
+std::string trim_right(const std::string& str) {
+	const std::string pattern = " \f\n\r\t\v";
+	return str.substr(0,str.find_last_not_of(pattern) + 1);
+}
+
+std::string trim(const std::string& str) {
+	return trim_left(trim_right(str));
+}
 
 bool isvalidday(int year, int month, int day) {
 	if (day <= 0)

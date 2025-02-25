@@ -40,6 +40,9 @@ public:
 	} ;
 } ;
 
+std::string trim_left(const std::string& str) ;
+std::string trim_right(const std::string& str) ;
+std::string trim(const std::string& str) ;
 bool str_isvaliddate(std::string date) ;
 bool str_isdigit(std::string val) ;
 bool str_isdouble(std::string val) ;
