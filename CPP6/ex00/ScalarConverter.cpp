@@ -22,7 +22,7 @@ ScalarConverter &ScalarConverter::operator=(const ScalarConverter &copy) { (void
 static bool str_isliteral(const char *str) {
 	bool found_dot = false ;
 	for (size_t i = 0; str[i]; i++) {
-		if (!isdigit(str[i]) && str[i] != '.' && str[i] != 'f')
+		if (!isdigit(str[i]) && str[i] != '.' && str[i] != 'f' && str[i] != '-')
 			return false ;
 		if (str[i] == '.') {
 			if (found_dot)
@@ -31,6 +31,8 @@ static bool str_isliteral(const char *str) {
 				found_dot = true ;
 		}
 		if (str[i] == 'f' && str[i + 1])
+			return false ;
+		if (str[i] == '-' && i != 0)
 			return false ;
 	}
 	return true ;
