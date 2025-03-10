@@ -65,20 +65,30 @@ unsigned int Span::shortestSpan() {
 	return shortest_span ;
 }
 
+// // Dumb shit I've done
+// unsigned int Span::longestSpan() {
+// 	if (this->values.size() == 0 || this->values.size() == 1)
+// 		throw Span::SpanEmptyException() ;
+
+// 	unsigned int longestSpan = abs(this->values[0] - this->values[1]) ;
+
+// 	for (size_t i = 0; i < this->values.size(); i++) {
+// 		for (size_t j = (i + 1); j < this->values.size(); j++) {
+// 			if ((unsigned int) abs(this->values[i] - this->values[j]) > longestSpan)
+// 				longestSpan = abs(this->values[i] - this->values[j]) ;
+// 		}
+// 	}
+
+// 	return longestSpan ;
+// }
+
+
+// Smart shit c++ already did for me
 unsigned int Span::longestSpan() {
 	if (this->values.size() == 0 || this->values.size() == 1)
 		throw Span::SpanEmptyException() ;
 
-	unsigned int longestSpan = abs(this->values[0] - this->values[1]) ;
-
-	for (size_t i = 0; i < this->values.size(); i++) {
-		for (size_t j = (i + 1); j < this->values.size(); j++) {
-			if ((unsigned int) abs(this->values[i] - this->values[j]) > longestSpan)
-				longestSpan = abs(this->values[i] - this->values[j]) ;
-		}
-	}
-
-	return longestSpan ;
+	return *std::max_element(this->values.begin(), this->values.end()) - *std::min_element(this->values.begin(), this->values.end()) ;
 }
 
 
