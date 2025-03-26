@@ -93,16 +93,17 @@ void BitcoinExchange::showStocks(std::ifstream &file) {
 
 /* Functions */
 
-// Thanks to dede.exe for those trim function, was a bit lost when I saw that I didn't have the right to use boost algorithms
-
 std::string trim_left(const std::string& str) {
-	const std::string pattern = " \f\n\r\t\v";
-	return str.substr(str.find_first_not_of(pattern));
+	std::size_t index = str.find_first_not_of(PATTERN) ;
+
+	if (index == std::string::npos)
+		return "" ;
+
+	return str.substr(index) ;
 }
 
 std::string trim_right(const std::string& str) {
-	const std::string pattern = " \f\n\r\t\v";
-	return str.substr(0,str.find_last_not_of(pattern) + 1);
+	return str.substr(0,str.find_last_not_of(PATTERN) + 1);
 }
 
 std::string trim(const std::string& str) {

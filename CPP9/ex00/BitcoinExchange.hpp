@@ -7,10 +7,13 @@
 #include <limits>
 #include <ios>
 #include <cstdlib>
+#include <cstring>
 #include <ctime>
-#include <boost/algorithm/string.hpp>
+// #include <boost/algorithm/string.hpp>
 #include <sstream>
 #include <exception>
+
+#define PATTERN " \f\n\r\t\v"
 
 class BitcoinExchange
 {
